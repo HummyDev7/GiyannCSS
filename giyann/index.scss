@@ -1,17 +1,17 @@
 //variables & Functions
-@import 'variables';
+@import 'atomCSS/variables';
 
 //Base & Layout
-@import 'base';
+@import 'atomCSS/base';
 
 //Atoms CSS ( )
-@import 'colors';
-@import 'typography';
-@import 'grid-system';
+@import 'atomCSS/colors';
+@import 'atomCSS/typography';
+@import 'atomCSS/grid-system';
 
 //Molecule CSS ( buttons, inputs etc..)
-@import 'button';
-@import 'card';
-@import 'input';
+@import 'moleculeCSS/button';
+@import 'moleculeCSS/card';
+@import 'moleculeCSS/input';
 
 //Utilities 
