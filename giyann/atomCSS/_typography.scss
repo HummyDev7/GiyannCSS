@@ -1,0 +1,56 @@
+@each $property, $map in $display-typography {
+  $prefix: map-get($map, "prefix");
+  $variants: map-get($map, "variants");
+
+  @each $variant, $variant-properties in $variants {
+    $font-family: map-get($variant-properties, "font-family");
+    $font-weight: map-get($variant-properties, "font-weight");
+    $font-size: map-get($variant-properties, "font-size");
+    $line-height: map-get($variant-properties, "line-height");
+
+    .#{$prefix}-#{$variant} {
+      font-family: $font-family;
+      font-weight: $font-weight;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+  }
+}
+
+@each $property, $map in $heading-typography {
+  $prefix: map-get($map, 'prefix');
+  $variant: map-get($map, 'variant');
+
+  @each $var, $var-prop in $variant {
+    $font-family: map-get($var-prop, "font-family");
+    $font-weight: map-get($var-prop, "font-weight");
+    $font-size: map-get($var-prop, "font-size");
+    $line-height: map-get($var-prop, "line-height");
+
+    .#{$prefix}-#{$var} {
+      font-family: $font-family;
+      font-weight: $font-weight;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+  }
+}
+
+@each $property, $map in $body-typography {
+  $prefix: map-get($map, "prefix");
+  $variant: map-get($map, "variants");
+
+  @each $k, $v in $variant {
+    $font-family: map-get($v, "font-family");
+    $font-weight: map-get($v, "font-weight");
+    $font-size: map-get($v, "font-size");
+    $line-height: map-get($v, "line-height");
+
+    .#{$prefix}-#{$k} {
+      font-family: $font-family;
+      font-weight: $font-weight;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+  }
+}

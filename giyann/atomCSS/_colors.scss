@@ -1,0 +1,25 @@
+//color pallets
+@each $prop, $map in $color-pallets {
+  $property: map-get($map, "property");
+  $prefix: map-get($map, "prefix");
+  $colors: map-get($map, "colors");
+
+  @each $key, $value in $colors {
+    .#{$prefix}-#{$key}00 {
+      #{$property}: $value;
+    }
+  }
+}
+
+//semantic colors
+@each $prop, $map in $semantic-colors {
+  $property: map-get($map, "property");
+  $prefix: map-get($map, "prefix");
+  $colors: map-get($map, "colors");
+
+  @each $key, $value in $colors {
+    .#{$prefix}-#{$key}00 {
+      #{$property}: $value;
+    }
+  }
+}
